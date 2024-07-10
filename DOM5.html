@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      #tabs {
+        display: flex;
+        gap: 20px;
+      }
+      .tab {
+        padding: 12px 25px;
+        background-color: #dadada;
+        border-radius: 10px;
+        /* margin-left: 20px; */
+      }
+      h3 {
+        margin-top: 25px;
+        display: none;
+        width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="tabs">
+      <div id="home" class="tab">Home</div>
+      <div id="about" class="tab">About</div>
+      <div id="contact" class="tab">Contact</div>
+    </div>
+    <h3 id="hometext">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad
+      necessitatibus delectus dolorum minus reiciendis quas laboriosam harum
+      maiores ipsum maxime! Praesentium culpa dolorum amet reprehenderit aliquam
+      doloribus consequatur cum placeat sit ipsam voluptatem, voluptas adipisci
+      quod accusamus officiis ut minus molestiae. Impedit, facere tenetur
+      corporis at, id optio cumque sequi aperiam excepturi magni animi illo ex
+      deserunt! Incidunt tempora officiis distinctio, neque, cum asperiores
+      deleniti delectus eveniet libero magni soluta alias similique deserunt
+      consequatur tenetur quod placeat aliquid laborum est. Quaerat debitis,
+      repellendus, impedit soluta accusamus consequuntur tenetur eos architecto
+      saepe, itaque nostrum illo asperiores alias ratione ex iste atque eius
+      voluptate labore nesciunt dignissimos omnis. Ut tempora omnis totam cumque
+      error enim, nam reprehenderit officiis eaque quos sequi temporibus
+      suscipit nisi necessitatibus illo dolore ullam dicta! Eveniet voluptates
+      itaque consequatur sit quas. Illo dicta quidem, consequatur commodi non
+      quisquam earum totam asperiores sint doloribus corrupti nostrum, officia
+      illum sequi quaerat consequuntur consectetur, possimus fugit incidunt
+      ducimus cumque suscipit? Explicabo, quidem! Quo omnis cumque fugiat
+      accusamus repudiandae qui quasi, eaque nostrum alias autem officiis
+      eveniet nisi unde quas quam minima. Enim totam corporis obcaecati nam
+      quae. Aliquam magni architecto earum odio perferendis quasi velit odit
+      debitis eaque molestiae eligendi, vitae omnis et amet. Quos laboriosam
+      nihil culpa eaque, ratione odio laborum nobis modi debitis laudantium
+      doloribus. Ducimus assumenda quidem, laboriosam obcaecati soluta explicabo
+      fuga esse voluptate? Placeat, quibusdam. Reprehenderit, eius!
+    </h3>
+    <h3 id="abouttext">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati qui
+      adipisci, excepturi amet provident voluptatibus dolorum autem rem suscipit
+      non numquam aliquam molestias quo dicta? Iure voluptates blanditiis,
+      architecto quaerat perferendis non laboriosam nesciunt ex. Quos architecto
+      numquam, porro sunt accusamus quidem, non temporibus quia reprehenderit
+      iusto tempora. Architecto ipsum maxime ratione consequatur expedita eos
+      unde, quod minus numquam assumenda perferendis laboriosam repellat veniam
+      ducimus hic aut at praesentium voluptates eveniet debitis. Veritatis
+      quidem dolore, eveniet quisquam excepturi expedita nobis quaerat
+      cupiditate laudantium incidunt officiis, saepe nisi, ex laboriosam.
+      Tempora sapiente a deleniti dignissimos doloremque eius delectus placeat
+      doloribus iste sint sequi, ratione unde earum at voluptate architecto
+      similique magni modi sit vero? Eaque quasi consectetur illo facilis
+      placeat optio voluptatum debitis! Quaerat ea labore consectetur vitae
+      pariatur est assumenda! Nemo aspernatur accusamus quis unde non
+      exercitationem tempore repellendus ea molestiae rerum inventore expedita
+      natus reiciendis vel repellat, voluptatibus et?
+    </h3>
+    <h3 id="contacttext">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad
+      necessitatibus delectus dolorum minus reiciendis quas laboriosam harum
+      maiores ipsum maxime! Praesentium culpa dolorum amet reprehenderit aliquam
+      doloribus consequatur cum placeat sit ipsam voluptatem, voluptas adipisci
+      quod accusamus officiis ut minus molestiae. Impedit, facere tenetur
+      corporis at, id optio cumque sequi aperiam excepturi magni animi illo ex
+      deserunt! Incidunt tempora officiis distinctio, neque, cum asperiores
+      deleniti delectus eveniet libero magni soluta alias similique deserunt
+      consequatur tenetur quod placeat aliquid laborum est. Quaerat debitis,
+      repellendus, impedit soluta accusamus consequuntur tenetur eos architecto
+      saepe, itaque nostrum illo asperiores alias ratione ex iste atque eius
+      voluptate labore nesciunt dignissimos omnis. Ut tempora omnis totam
+      cumque.
+    </h3>
+    <script>
+      var home = document.querySelector("#home");
+      var about = document.querySelector("#about");
+      var contact = document.querySelector("#contact");
+
+      var hometext = document.querySelector("#hometext");
+      var abouttext = document.querySelector("#abouttext");
+      var contacttext = document.querySelector("#contacttext");
+
+      home.addEventListener("click", function () {
+        hidden();
+        hometext.style.display = "block";
+        hometext.style.width = "50%";
+      });
+      about.addEventListener("click", function () {
+        hidden();
+        abouttext.style.display = "block";
+        abouttext.style.width = "50%";
+      });
+      contact.addEventListener("click", function () {
+        hidden();
+        contacttext.style.display = "block";
+        contacttext.style.width = "50%";
+      });
+
+      function hidden() {
+        document.querySelectorAll("h3").forEach(function (h3) {
+          h3.style.display = "none";
+        });
+      }
+    </script>
+  </body>
+</html>

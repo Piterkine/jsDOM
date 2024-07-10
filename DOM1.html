@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      img {
+        width: 200px;
+        height: 200px;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <img
+      id="firstimg"
+      src="https://images.unsplash.com/photo-1686170287433-c95faf6d3608?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxMXx8fGVufDB8fHx8fA%3D%3D"
+      alt="img here"
+    />
+    <img
+      id="secimg"
+      src="https://images.unsplash.com/photo-1719530910477-182ceb10b681?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxMnx8fGVufDB8fHx8fA%3D%3D"
+      alt="img here"
+    />
+
+    <button>Click Here</button>
+
+    <script>
+      var img1 = document.querySelector("#firstimg");
+      var img2 = document.querySelector("#secimg");
+      var button = document.querySelector("button");
+      button.addEventListener("click", function () {
+        var src1 = img1.src;
+        var src2 = img2.src;
+        img1.src = src2;
+        img2.src = src1;
+        console.log("mai chali");
+      });
+    </script>
+  </body>
+</html>

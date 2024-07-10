@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FORM DOM</title>
+  </head>
+  <body>
+    <h4 id="error"></h4>
+    <form>
+      <input type="text" id="inp1" />
+      <input type="text" id="inp2" />
+      <button type="submit">SUBMIT</button>
+    </form>
+
+    <script>
+      var form = document.querySelector("form");
+      var inps = document.querySelectorAll("input");
+      var error = document.querySelector("h4");
+      form.addEventListener("submit", function (ev) {
+        ev.preventDefault();
+        //         if (inp1.value === "" || inp2.value === "") {
+        //           error.innerText = "Error Some field are blank!!";
+        //           error.style.color = "red";
+        //         } else {
+        //           error.innerText = "";
+        //           error.style.color = "black";
+        //         }
+        for (var i = 0; i < inps.length; i++) {
+          if (inps[i].value.trim() === "") {
+            error.innerText = "Error Some Field Are Blank";
+            error.style.color = "red";
+          } else {
+            error.innerText = "";
+            error.style.color = "black";
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
